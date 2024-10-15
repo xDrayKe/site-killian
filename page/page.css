@@ -1,0 +1,217 @@
+* {
+  padding : 0;
+  margin : 0;
+}
+body {
+    margin : 0;
+    padding : 0;
+    background-color: #141414;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ff4d5a
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+img {
+    height: 70vh;
+    width : 90vh;
+}
+#name { 
+  position: fixed; 
+  top : 0;  
+  left : 0; 
+  color: #ff4d5a; 
+  font-size: 20px;  
+  margin : 10px;  
+  padding: 18px;  
+  font-family: 'Montserrat';
+  text-decoration: none;
+}
+#name:hover { 
+  color :white;
+}
+.arrowLeft {
+  position: fixed;
+  left:0;
+  top : 50%;
+  transform: translate(0%, -50%);
+  width: 100px;
+  height: 100px;
+}
+.arrowRight {
+  position: fixed;
+  right:0;
+  top : 50%;
+  transform: translate(0%, -50%);
+  width: 100px;
+  height: 100px;
+}
+.App-social-link {
+  font-size: small;
+  max-height: 100%;
+  position: fixed;
+  bottom: 0;
+  right:0;
+  padding: 20px;
+  font-size: 17px;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+
+.App-social-link a {
+  text-decoration: none;
+  color: #ff4d5a;
+}
+.top,.breakdown,.inline {
+  margin: 100px;
+}
+
+.top,.breakdown,.inline {    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top h1 {   
+    width: 250px;
+    border-right : #ff4d5a 6px solid;
+    font-size: 45px;
+    margin-right: 20px;
+    font-family: 'Montserrat';
+    padding : 150px 0 150px 0;
+}
+.top img {
+  width: 900px;
+  height: 630px;
+}
+.breakdown h1 {
+  padding-left :50px;
+}
+.breakdown h1 {
+  font-family: 'Montserrat';
+}
+.slider {
+    position: relative;
+    height: 60vh;
+    width : 80vh;
+  }
+
+  input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #ddd;
+    outline: none;
+    margin: 10px 0;
+  }
+  
+  input[type=range]:focus {
+    outline: none;
+  }
+  
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 30%;
+    background-image: url("img/slider.png");
+    position: relative;
+    top: -12px;
+    cursor: pointer;
+  }
+  
+  input[type=range]::-moz-range-thumb {
+    width: 32px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #000000;
+    position: relative;
+    top: -5px;
+    cursor: pointer;
+  }
+  
+  input[type=range]::-webkit-slider-runnable-track {
+    height: 10px;
+    border-radius: 2px;
+    background-color: rgb(172, 0, 0);
+  }
+  
+  input[type=range]::-moz-range-track {
+    height: 10px;
+    border-radius: 5px;
+  }
+  .slider-images {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 60vh;
+    width : 80vh;
+  }
+  
+  .slider-image {
+    position: absolute;
+    height: 60vh;
+    width : 80vh;
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out;
+  }
+  #i1 {
+      opacity: 1;
+  }
+  #composition {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+  }
+  #composition h1 {
+    font-family: 'Montserrat';
+  }
+
+  /* Style pour la div contenant le titre et le paragraphe */
+  #lines {
+    display: inline-flex;
+    align-items: center;
+    margin : 50px 0 30px 0;
+    width: 70%;
+  }
+
+  /* Style pour le titre "Lines" */
+  #lines h2 {
+    font-size: 120px;
+    font-weight: bold;
+    color : #ff4d5a;
+    font-family: 'Bebas Neue';
+    margin-bottom: -20px;
+  }
+  .titleL {
+    text-align: left;
+  }
+  .titleR {
+    text-align: right;
+  }
+  /* Style pour le paragraphe */
+  #lines .left {
+    font-size: 20px;
+    text-align: left;
+    margin-right: 10%;
+    color : #ffffff;
+    font-family: 'Montserrat';
+  }
+  #lines .right {
+    font-size: 20px;
+    text-align: right;
+    margin-left: 10%;
+    color : #ffffff;
+    font-family: 'Montserrat';
+  }

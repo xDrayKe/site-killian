@@ -1,0 +1,396 @@
+*{
+  margin : 0;
+  padding : 0;
+}
+
+body {
+  background-color: #141414;
+  max-width: 100%;
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; 
+  display: flex;
+  align-items: center;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+
+
+
+@font-face {
+  font-family: 'uniTiny';
+  src: url('uni-sans.thin-caps.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'uniHeavy';
+  src: url('uni-sans.heavy-caps.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+  
+ 
+
+
+#name { 
+  position: absolute; 
+  top : 0;  
+  left : 0; 
+  color: #ff4d5a; 
+  font-size: 18px;  
+  margin : 10px;  
+  padding: 18px;  
+  font-family: 'Montserrat';
+  text-decoration: none;
+}
+#name1 { 
+  position: absolute; 
+  top : 25px;  
+  left : 0; 
+  color: #9f9f9f; 
+  font-size: 18px;  
+  margin : 10px;  
+  padding: 18px;  
+  font-family: 'Montserrat';
+  text-decoration: none;
+}
+
+#contact {  
+  position: absolute; 
+  top : 0;  
+  right : 0;  
+  color: #ff4d5a; 
+  font-size: 25px;  
+  margin : 30px;  
+  padding: 18px 18px; 
+  font-family: 'Montserrat';
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#contactText h2:hover {
+  color : white;
+}
+#contactText h2 {
+  color :#ff4d5a ;
+}
+h2:hover {
+  color : white;
+}
+.portfolio {
+  position: absolute;
+  top : -1%;
+  left:50%; 
+  transform: translate(-50%,0);
+  color :#6e6e6e;
+  font-size: 200px;
+  z-index: -1;
+  opacity: 0.02;
+}
+#contactText {
+  display: none;
+  position: absolute;
+  top : 90px;
+  right : 60px;
+  text-align: right;
+  transition: all 1s;
+  font-size : 13px;
+} 
+
+#contactText a {
+  text-decoration: none;
+  color: #ff4d5a;
+  opacity: 0.8;
+}
+
+
+.App-images-projectsInvisible {
+  opacity: 0;filter: grayscale(1100%);
+  transition: 0.5s;
+  margin-left: 6px;
+  width: 175px;
+  height: 300px;
+  object-fit: cover;
+  align-items: center;
+}
+
+.App-images-projects {
+  filter: grayscale(0%);
+  transition: 0.5s;
+  width: 175px;
+  height: 300px;
+  object-fit: cover;
+  align-items: center;
+}
+
+.App-images-projectsFirst {
+  filter: grayscale(100%);
+  transition: 0.5s;
+  width: 175px;
+  height: 300px;
+  object-fit: cover;
+}
+
+  
+
+.App-images-projects:hover, .App-images-projectsFirst:hover {
+  filter: grayscale(0);
+  transition: 0.5s;
+  height : 400px;
+  width: 400px;
+}
+
+.text {
+  height : 120px;
+  background: rgba(14, 14, 14, 0.72);
+  border: 1px solid black;
+  border-top: 3px solid #ff4d5a ;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+  transition: opacity .2s, visibility .2s, display .2s;
+}
+
+.App-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #ff4d5a;
+  margin: 3rem;
+}
+
+.App-info-and-project {
+  margin-top: 8%;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.App-my-info {
+  transition: 0.5s;
+  font-size: small;
+  width: 30%;
+  color: grey;
+  text-align: left;
+  border-left: 2px solid #ff4d5a;
+  padding-left: 10px;
+}
+
+  
+
+.App-my-info a {
+  color: #ff4d5a;
+  text-decoration: none;
+}
+
+.App-list-projects {
+  display : flex;  
+  align-items: center;
+  width : 100vw;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.App-social-link {
+  font-size: small;
+  max-height: 100%;
+  position: absolute;
+  bottom: 0;
+  right:0;
+  padding: 20px;
+  font-size: 17px;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+
+.App-social-link a {
+  text-decoration: none;
+  color: #ff4d5a;
+}
+
+.App-social-link a:hover {
+  color :#ffffff;
+}
+
+.card {
+  width: 400px;
+  margin: 10px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.card:hover .card__image {
+  filter: grayscale(0);
+  transition: 0.5s;
+  height : 400px;
+  width: 400px;
+}
+
+.card:hover .card__caption {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.card:hover .card__thumb::after {
+  top: 0;
+}
+
+.card__thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.card__thumb::after {
+  position: absolute;
+  top: 0;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 101%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 40%, rgba(255, 255, 255, 0) 100%);
+  transition: 0.3s;
+}
+
+.card__image {
+  transition: 0.5s ease-in-out;
+}
+
+.card__caption {
+  position: absolute;
+  z-index: 1;
+  padding: 0 20px;
+  color: white;
+  transform: translateY(-50%);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card__caption::after{
+  position: absolute;
+}
+
+@media (min-width: 768px) {
+  .card__caption {
+    top: calc(100%);
+     transform:translate(0,-80px);/* POUR CHANGER LA HAUTEUR DU TITRE */
+  }
+}
+
+.card__title {
+  display: -webkit-box;
+  max-height: 85px;
+  overflow: hidden;
+  font-family: "uniHeavy";
+  font-size: 22px;
+  line-height: 28px;
+  text-shadow: 0px 1px 5px black;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+} 
+
+.card__title1 {
+  display: -webkit-box;
+  max-height: 85px;
+  overflow: hidden;
+  font-family: "uniTiny";
+  font-size: 22px;
+  line-height: 28px;
+  text-shadow: 0px 1px 5px black;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.card__snippet {
+  display: -webkit-box;
+  max-height: 150px;
+  margin: 10px 0;
+  overflow: hidden;
+  font-size: 16px;
+  line-height: 20px;
+  text-overflow: ellipsis;
+  transition: 0.5s ease-in-out;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+
+@media (min-width: 768px) {
+  .card__snippet {
+    margin: 22px 0;
+  }
+}
+.card_icon{
+  display: inline-block;
+}
+.card_icon img {
+  width: 50px;
+  height: 50px;
+}
+.card__button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top : 10px;
+  margin-left: 10px;
+  color: white;
+  border: 1px solid white;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.card__button:hover {
+  color: black;
+  background-color:white;
+}
+.card_icon {
+  display: inline;
+  text-align: center;
+  max-width: 50%;
+}
+.card_icon img {
+  margin-left:10px;
+}
+.scroll {
+  color :#ff4d5a;
+  font-size: 15px;
+  margin : 50px 0 0 0;
+  border-top: #ff4d5a 4px solid;
+  width: 250px;
+  float : right;
+  padding-top : 5px;
+  opacity: 1;
+  transition: all 0.5s;
+  font-family: 'Montserrat';
+}
+
+.img {
+  height: 300px;
+  width: 450px;
+  margin-left:100px;
+  border-left: #ff4d5a 2px solid;
+  padding-left: 100px;
+}
+
+.title {
+  display: flex;
+  margin : 50px;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+
+
